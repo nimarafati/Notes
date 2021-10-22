@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  rstudio:
+    image: 'rocker/verse:4.1.1'
+    ports:
+      - 8787:8787
+    environment:
+      - 'DISABLE_AUTH=true'
+    volumes:
+      - "$PWD:/home/rstudio"
+    working_dir: /home/rstudio
+    #user: "${UID}:${GID}"
