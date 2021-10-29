@@ -9,7 +9,7 @@ output: html_document
 while IFS=, read -r sample R1 R2 strand; do
   # do something... Don't forget to skip the header line!
   [[ "$sample" != "Name" ]] && echo "$sample"
-done < sample.csv
+done < (tail -n +2 sample.csv) #Ignore the header
 
 ```
 
