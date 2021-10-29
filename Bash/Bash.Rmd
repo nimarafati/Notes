@@ -1,0 +1,15 @@
+---
+title: "Bash"
+output: html_document
+---
+# Readin csv file with header  
+```{bash, eval = F}
+#sample,R1,R2,strandness
+#sample1,sample1_R1.fq.gz,sample1_R2.fq.gz,reverse
+while IFS=, read -r sample R1 R2 strand; do
+  # do something... Don't forget to skip the header line!
+  [[ "$sample" != "Name" ]] && echo "$sample"
+done < sample.csv
+
+```
+
