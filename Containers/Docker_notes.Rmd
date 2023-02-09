@@ -97,7 +97,7 @@ Push the image to github
 ```{bash, eval = F}
 export GHCR=My_Token
 own_image % echo "$GHCR" | docker login ghcr.io -u nimarafati --password-stdin 
-own_image % docker build -t gchr.io/nimarafati/docker_demo/spade:1.0 .
+own_image % docker build -t ghcr.io/nimarafati/docker_demo/spade:1.0 .
 ```
 
 
